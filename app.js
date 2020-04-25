@@ -11,13 +11,13 @@ app.use('/api/auth', require('./routes/auth-routes'))
 app.use('/api/link', require('./routes/link-routes'))
 app.use('/api/t', require('./routes/redirect-routes'))
 
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
   })
-}
+// }
 
 const PORT = config.get('port') || 3000;
 

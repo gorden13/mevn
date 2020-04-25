@@ -1,7 +1,12 @@
 <template>
   <div class="header">
-    <h1>Elephant</h1>
-    <p>Здесь логотип</p>
+    <div class="header__info">
+      <h1>gorden13</h1>
+      <p>разработка реактивных веб-сайтов</p>
+    </div>
+
+    <!-- <img src="~assets/images/bg_header.png" class="logo" alt="logo"> -->
+    <vue-particles color="#fff" particleopacity="1" />
   </div>
 </template>
 
@@ -12,12 +17,24 @@ export default {
 
 <style lang="scss" scoped>
   .header {
-    padding: 10px;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    background: #1abc9c;
-    color: white;
+    height: 450px;
+    background: #333;
+    // background-image: url('~assets/images/23.png');
+    // background-size: cover;
+    @media screen and (max-width: $screen-tablet-min-width) {
+      & .logo {
+        width: 100%;
+      }
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 50%;
+      height: 75px;
+      justify-content: space-between;
+      color: $white;
+    }
   }
 </style>

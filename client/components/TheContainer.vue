@@ -1,26 +1,35 @@
 <template>
   <div class="main">
-    <h2>Информация</h2>
-    <div class="fakeimg" style="height:200px;">
-      Image
-    </div>
-    <h3>Какие-то условия приёма</h3>
-    <ul>
-      <li>Первый пункт</li>
-      <li>Второй пункт</li>
-      <li>Третий пункт</li>
-    </ul>
-    <div class="fakeimg" style="height:200px;">
-      Image
-    </div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <!-- <autoText /> -->
+    <skillsList />
+    <!-- примеры тестовых заданий по Vue.
+    Описание заданий внутри проектов:
+
+    https://github.com/gorden13/notelist
+    https://github.com/gorden13/respondets
+    https://github.com/gorden13/range-slider-example
+
+    дополнительно:
+
+    - Опыт использования средств командной разработки git, svn, TFS, Bitbucket, TortoiseGit, SourceTree
+    - Использование pixel perfect, googleDevTools, Postman
+    - Вёрстка по макетам axure
+    - Опыт деплоя проектов на heroku, автодеплой.
+    - Опыт командной разработки. Проведение ретроспектив
+    - Умение быстро разбираться в чужом коде
+    - Английский язык на техническом уровне
+    - Огромное желание расти и развиваться! -->
   </div>
 </template>
 
 <script>
+// import autoText from '@/components/auto-text'
+import skillsList from '@/components/main/skills-list'
 export default {
-
+  components: {
+    skillsList
+    // autoText
+  }
 }
 </script>
 

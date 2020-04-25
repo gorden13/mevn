@@ -22,7 +22,8 @@ export default {
   .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: #333;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;

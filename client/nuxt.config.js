@@ -23,12 +23,14 @@ export default {
   ** Global CSS
   */
   css: [
-    '@assets/scss/main.scss'
+    '@assets/scss/main.scss',
+    '@assets/scss/fonts.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/particles'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -43,8 +45,26 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    [
+      'nuxt-fontawesome', {
+        imports: [{
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ]
   ],
+  styleResources: {
+    scss: [
+      '@assets/scss/variables.scss'
+    ]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

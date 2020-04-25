@@ -1,26 +1,20 @@
 <template>
   <div class="container">
-    <TheAside />
-    <TheContainer />
+    <skills-list />
+    <!-- <TheSide /> -->
+    <!-- <TheContainer /> -->
   </div>
 </template>
 
 <script>
-import TheAside from '@/components/TheAside'
-import TheContainer from '@/components/TheContainer'
+// import TheSide from '@/components/TheSide'
+// import TheContainer from '@/components/TheContainer'
+import skillsList from '@/components/main/skills-list'
 export default {
   components: {
-    TheAside,
-    TheContainer
+    skillsList
+    // TheSide,
+    // TheContainer
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .container {
-    display: flex;
-    @media screen and (max-width: 700px) {
-      flex-direction: column;
-    }
-  }
-</style>
